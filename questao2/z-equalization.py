@@ -1,11 +1,9 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import os  # <--- NOVA BIBLIOTECA ADICIONADA AQUI
+import os 
 
-# ==========================================
-# 1. DEFINIÇÃO DAS FUNÇÕES
-# ==========================================
+# Funções de processamento de imagens
 
 def power_law(img, gamma):
     img_normalizada = img / 255.0
@@ -35,9 +33,7 @@ def calcular_e_mostrar_histograma_cdf(img, titulo):
     plt.title(titulo)
     plt.show()
 
-# ==========================================
-# 2. TESTES, CRIAÇÃO DE PASTAS E GUARDA
-# ==========================================
+# Teste de execução das funções
 
 nomes_imagens = ['car.png', 'crowd.png', 'university.png']
 
@@ -56,9 +52,8 @@ for nome in nomes_imagens:
     img_gamma_20 = power_law(img_rgb, 2.0) 
     img_eq = equalizar_imagem_rgb(img_rgb)
     
-    # -----------------------------------------------------
-    # NOVA LÓGICA: CRIAR PASTA E SALVAR AS 4 IMAGENS
-    # -----------------------------------------------------
+    
+    # Criar pasta para salvar as imagens processadas
     # Pega apenas o nome sem a extensão (ex: 'car' de 'car.png')
     nome_pasta = nome.split('.')[0]
     
@@ -77,10 +72,10 @@ for nome in nomes_imagens:
     cv2.imwrite(os.path.join(nome_pasta, f"3_powerlaw_2.0_{nome}"), bgr_gamma_20)
     cv2.imwrite(os.path.join(nome_pasta, f"4_equalizada_{nome}"), bgr_eq)
     
-    print(f"✔️ As 4 imagens foram guardadas na pasta: '{nome_pasta}'")
-    # -----------------------------------------------------
+    print(f"Imagens salvas na pasta: '{nome_pasta}'")
+
     
-    # (Opcional) Mostrar os resultados na tela (Gráficos Matplotlib)
+    # Resultados na tela (Gráficos Matplotlib)
     plt.figure(figsize=(15, 5))
     
     plt.subplot(1, 4, 1)

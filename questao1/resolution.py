@@ -2,9 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# ==========================================
-# 1. DEFINIÇÃO DAS FUNÇÕES
-# ==========================================
+# Funções de processamento de imagens
 
 def aumentar_por_2(img):
     # Função auxiliar para repetir os píxeis
@@ -37,9 +35,9 @@ def SUPERRES(img1, img2):
     h, w, c = img1.shape
     res = np.zeros((h * 2, w * 2, c), dtype=np.float32)
 
-    # Imagem 1 nas linhas e colunas pares (índices 0, 2, 4...)
+    # Imagem 1 nas linhas e colunas pares 
     res[0::2, 0::2] = img1.astype(np.float32)
-    # Imagem 2 nas linhas e colunas ímpares (índices 1, 3, 5...)
+    # Imagem 2 nas linhas e colunas ímpares 
     res[1::2, 1::2] = img2.astype(np.float32)
 
     # CORREÇÃO DA IMAGEM 1 (buracos nas colunas ímpares das linhas pares)
@@ -52,9 +50,7 @@ def SUPERRES(img1, img2):
     
     return np.clip(res, 0, 255).astype(np.uint8)
 
-# ==========================================
-# 2. TESTES E SALVAMENTO DAS IMAGENS
-# ==========================================
+# Teste de execução das funções
 
 # Carregar imagens originais
 img_fruit1 = cv2.imread('FRUIT1.jpg')
@@ -65,12 +61,12 @@ if img_fruit1 is not None and img_fruit2 is not None:
     img_fruit1 = cv2.cvtColor(img_fruit1, cv2.COLOR_BGR2RGB)
     img_fruit2 = cv2.cvtColor(img_fruit2, cv2.COLOR_BGR2RGB)
 
-
-    # Redimensionar a imagem 2 para ter o mesmo tamanho da imagem 1
+    # Caso queira fazer com imagens de tamanhos diferentes, você pode redimensionar a 
+    # imagem 2 para ter o mesmo tamanho da imagem 1.
     # altura, largura = img_fruit1.shape[:2]
     # img_fruit2 = cv2.resize(img_fruit2, (largura, altura))
 
-    # Executar as funções de processamento
+
     img_tam2_2 = TAM2(img_fruit1, 2)
     img_tam2_8 = TAM2(img_fruit1, 8)
     img_tamm = TAMM(img_fruit1)
@@ -84,7 +80,7 @@ if img_fruit1 is not None and img_fruit2 is not None:
     
     print("As 4 imagens resultantes foram salvas na sua pasta.")
 
-    # Mostrar as imagens no gráfico (Matplotlib)
+    # Resultados na tela (Gráficos Matplotlib)
     plt.figure(figsize=(15, 5))
 
     plt.subplot(1, 4, 1)
