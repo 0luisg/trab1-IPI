@@ -32,7 +32,6 @@ git clone [https://github.com/0luisg/trab1-IPI.git](https://github.com/0luisg/tr
 cd trab1-IPI
 
 2. Instale as bibliotecas necessárias:
-
 Bash
 pip install opencv-python numpy matplotlib
 
@@ -40,10 +39,9 @@ pip install opencv-python numpy matplotlib
 Certifique-se de que as imagens de teste (FRUIT1.jpg, FRUIT2.jpg, car.png, crowd.png, university.png) se encontram na mesma pasta dos arquivos Python.
 
 Para a etapa de ampliação (Questão 1):
-
 Bash
 python teste.py
-Para a etapa de realce e histogramas (Questão 2):
 
+Para a etapa de realce e histogramas (Questão 2):
 Bash
 python questao2.py
