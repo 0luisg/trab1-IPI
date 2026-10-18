@@ -32,7 +32,7 @@ git clone [https://github.com/0luisg/trab1-IPI.git](https://github.com/0luisg/tr
 cd trab1-IPI
 
 2. Execute os scripts:
-Certifique-se de que as imagens de teste (FRUIT1.jpg, FRUIT2.jpg, car.png, crowd.png, university.png) se encontram na mesma diretoria dos ficheiros Python.
+Certifique-se de que as imagens de teste (FRUIT1.jpg, FRUIT2.jpg, car.png, crowd.png, university.png) se encontram na mesma pasta dos arquivos Python.
 
 Para a etapa de ampliação (Questão 1):
 
