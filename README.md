@@ -29,3 +29,21 @@ O projeto está dividido em duas partes principais:
 ```bash
 git clone [https://github.com/0luisg/trab1-IPI.git](https://github.com/0luisg/trab1-IPI.git)
 cd trab1-IPI
+
+⚙️ Como Executar o Projeto localmente
+1. Clone este repositório:
+
+Bash
+git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
+cd NOME_DO_REPOSITORIO
+2. Execute os scripts:
+Certifique-se de que as imagens de teste (FRUIT1.jpg, FRUIT2.jpg, car.png, crowd.png, university.png) se encontram na mesma diretoria dos ficheiros Python.
+
+Para correr a etapa de ampliação (Questão 1):
+
+Bash
+python teste.py
+Para correr a etapa de realce e histogramas (Questão 2):
+
+Bash
+python questao2.py
