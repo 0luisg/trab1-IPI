@@ -26,22 +26,25 @@ O projeto está dividido em duas partes principais:
 ## ⚙️ Como Executar o Projeto localmente
 
 **1. Clone este repositório:**
-```
-bash
+```bash
 git clone [https://github.com/0luisg/trab1-IPI.git](https://github.com/0luisg/trab1-IPI.git)
 cd trab1-IPI
+```
 
-2. Instale as bibliotecas necessárias:
-Bash
+**2. Instale as bibliotecas necessárias:**
+```bash
 pip install opencv-python numpy matplotlib
+```
 
-3. Execute os scripts:
-Certifique-se de que as imagens de teste (FRUIT1.jpg, FRUIT2.jpg, car.png, crowd.png, university.png) se encontram na mesma pasta dos arquivos Python.
+**3. Execute os scripts:**
+Certifique-se de que as imagens de teste (`FRUIT1.jpg`, `FRUIT2.jpg`, `car.png`, `crowd.png`, `university.png`) estão na mesma pasta dos arquivos Python.
 
-Para a etapa de ampliação (Questão 1):
-Bash
+Para rodar a etapa de ampliação (Questão 1):
+```bash
 python teste.py
+```
 
-Para a etapa de realce e histogramas (Questão 2):
-Bash
+Para rodar a etapa de realce e histogramas (Questão 2):
+```bash
 python questao2.py
+```
